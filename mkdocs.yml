@@ -1,0 +1,10 @@
+site_name: Video Delivery Operations
+nav:
+    - Home: index.md
+    - Sidearm: ./sidearm/index.md
+
+theme:
+  name: material
+
+markdown_extensions:
+   - markdown_include.include
