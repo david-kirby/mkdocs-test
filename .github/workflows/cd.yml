@@ -15,7 +15,7 @@ jobs:
       - name: mkdocs deploy
         uses: david-kirby/actions-mkdocs@main
         with:
-          dependency_file: ${{ env.GITHUB_WORKSPACE }}/poetry.lock
+          dependency_file: ${{ github.workspace }}/poetry.lock
 
       # - name: Install poetry
       #   run: |
