@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: mkdocs deploy
-        uses: david-kirby@actions-mkdocs
+        uses: david-kirby/actions-mkdocs
         with:
           dependency_file: ${{ env.GITHUB_WORKSPACE }}/poetry.lock
 
