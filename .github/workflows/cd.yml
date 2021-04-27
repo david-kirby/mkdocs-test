@@ -16,15 +16,3 @@ jobs:
         uses: david-kirby/actions-mkdocs@main
         with:
           dependency_file: ${{ github.workspace }}/poetry.lock
-
-      # - name: Install poetry
-      #   run: |
-      #     echo "$HOME/.poetry/bin" >> $GITHUB_PATH
-      #     make poetry
-
-      # - name: Build dependencies
-      #   run: poetry install
-
-      # - name: Deploy docs
-      #   run: |
-      #     poetry run mkdocs gh-deploy --force
