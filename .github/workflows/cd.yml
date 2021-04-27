@@ -11,15 +11,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
-      - name: Install poetry
-        run: |
-          echo "$HOME/.poetry/bin" >> $GITHUB_PATH
-          make poetry
+      - name: mkdocs deploy
+        uses: david-kirby@actions-mkdocs
+        with:
+          dependency_file: ${{ env.GITHUB_WORKSPACE }}/poetry.lock
 
-      - name: Build dependencies
-        run: poetry install
+      # - name: Install poetry
+      #   run: |
+      #     echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      #     make poetry
 
-      - name: Deploy docs
-        run: |
-          poetry run mkdocs gh-deploy --force
+      # - name: Build dependencies
+      #   run: poetry install
+
+      # - name: Deploy docs
+      #   run: |
+      #     poetry run mkdocs gh-deploy --force
