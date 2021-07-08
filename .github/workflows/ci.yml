@@ -16,3 +16,4 @@ jobs:
       - name: Show vars
         run: |
           echo "${GITHUB_REF}"
+          echo ${{ github.event.pull_request.head.ref }}
